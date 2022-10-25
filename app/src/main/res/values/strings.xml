@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Camera Capture Test</string>
+    <string name="abrir_camara">Abrir Camara</string>
+    <string name="taken_picture">Taken Picture</string>
+</resources>
