@@ -2,4 +2,6 @@
     <string name="app_name">Camera Capture Test</string>
     <string name="abrir_camara">Abrir Camara</string>
     <string name="taken_picture">Taken Picture</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
