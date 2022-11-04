@@ -1,8 +1,10 @@
 package edu.uca.innovatech.investigacioncamaracapture
 
 import android.content.ActivityNotFoundException
+import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Build.VERSION_CODES.M
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,7 +26,10 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
     }
 
+    fun getImageUri(values: ContentValues): Uri?{
+        val imageUri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
 
-
+        return imageUri
+    }
 
 }

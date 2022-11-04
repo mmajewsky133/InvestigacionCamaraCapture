@@ -13,7 +13,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import edu.uca.innovatech.investigacioncamaracapture.databinding.FragmentVideoBinding
+import java.io.File
 import java.lang.Exception
 
 class VideoFragment : Fragment() {
@@ -33,11 +35,11 @@ class VideoFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.btnCamera.setOnClickListener(){
+        binding.btnCamera.setOnClickListener() {
             dispatchTakeVideoIntent()
         }
-        binding.btnPause.setOnClickListener(){
-            with (binding.vvCamera) {
+        binding.btnPause.setOnClickListener() {
+            with(binding.vvCamera) {
                 if (isPlaying) {
                     pause()
                 } else {
@@ -59,10 +61,10 @@ class VideoFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == AppCompatActivity.RESULT_OK) {
+        if (resultCode == AppCompatActivity.RESULT_OK) {
             val videoUri = data?.data
 
-            with (binding.vvCamera) {
+            with(binding.vvCamera) {
                 setVideoURI(videoUri)
 
                 val mediaController = MediaController(this@VideoFragment.context)
