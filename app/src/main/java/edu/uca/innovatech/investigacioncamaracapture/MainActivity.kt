@@ -32,4 +32,10 @@ class MainActivity : AppCompatActivity() {
         return imageUri
     }
 
+    fun getVidUri(values: ContentValues): Uri?{
+        val vidUri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+
+        return vidUri
+    }
+
 }
