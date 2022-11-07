@@ -50,7 +50,7 @@ class PhotoFragment : Fragment() {
         try {
             startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
         } catch (e: ActivityNotFoundException) {
-            println("peto por: ${e.message}")
+            println("El error se produjo por: ${e.message}")
         }
 
 

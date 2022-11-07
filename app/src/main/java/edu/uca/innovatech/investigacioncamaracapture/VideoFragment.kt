@@ -63,7 +63,7 @@ class VideoFragment : Fragment() {
         try {
             startActivityForResult(intent, REQUEST_VIDEO_CAPTURE)
         } catch (e: ActivityNotFoundException) {
-            // display error state to the user
+            println("El error se produjo por: ${e.message}")
         }
 
     }
